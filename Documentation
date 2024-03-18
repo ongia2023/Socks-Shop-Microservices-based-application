@@ -1,0 +1,115 @@
+Certainly! Here's an expanded version of the documentation including the commands used:
+
+### Introduction
+
+The Sock Shop is a microservices-based sample application used for demonstrating modern software architectures, particularly microservices, containerization, and orchestration.
+
+### Architecture
+
+The architecture of the Sock Shop application consists of several microservices communicating with each other. Each microservice is responsible for a specific domain or functionality.
+
+![Sock Shop Architecture](architecture-diagram.png)
+
+**Components**:
+- **Frontend**: Provides the user interface for browsing and purchasing socks.
+- **Microservices**: 
+  - Product Catalog
+  - Cart
+  - Payment
+  - Shipping
+  - Order
+  - User
+  - Catalogue
+  - Stock
+  - Queue-master
+- **Database**: MongoDB is used as the primary database for storing product and user information.
+- **Message Queue**: RabbitMQ is used for communication between microservices.
+- **Monitoring and Logging**: Prometheus for monitoring and ELK stack for logging.
+
+### Technologies Used
+
+- **Programming Languages**: Go, Python, Java, JavaScript
+- **Frameworks**: Spring Boot, Flask, Express
+- **Databases**: MongoDB, Redis
+- **Containerization and Orchestration**: Docker, Kubernetes
+- **Messaging Systems**: RabbitMQ
+- **Monitoring and Logging Tools**: Prometheus, ELK stack
+
+### Setup and Installation
+
+#### Prerequisites
+- Docker
+- Kubernetes
+- Helm
+
+#### Deployment Steps
+1. Clone the Sock Shop repository:
+
+   ```bash
+   git clone https://github.com/microservices-demo/microservices-demo.git
+   ```
+
+2. Navigate to the cloned directory:
+
+   ```bash
+   cd microservices-demo
+   ```
+
+3. Deploy Sock Shop using Kubernetes:
+
+   ```bash
+   kubectl apply -f deploy/kubernetes/complete-demo.yaml
+   ```
+
+### Usage
+
+Access the Sock Shop frontend UI by navigating to `http://localhost` in your web browser.
+
+### Configuration
+
+- Environment variables are used for configuring individual microservices.
+- Configuration files are available in the `deploy/kubernetes` directory.
+
+### Development
+
+- Contributions to the Sock Shop codebase follow standard development practices:
+  - Fork the repository and create feature branches for changes.
+  - Write unit tests and adhere to coding standards.
+  - Submit pull requests for review and integration.
+
+### Deployment
+
+#### Manual Deployment
+1. Apply Kubernetes manifests:
+
+   ```bash
+   kubectl apply -f deploy/kubernetes/complete-demo.yaml
+   ```
+
+#### Automated Deployment
+Use CI/CD pipelines with tools like Jenkins or GitLab CI for automated deployments.
+
+### Monitoring and Logging
+
+- Monitor metrics with Prometheus and visualize with Grafana.
+- Aggregate logs with the ELK stack (Elasticsearch, Logstash, Kibana).
+
+### Maintenance and Support
+
+- Regularly update dependencies and patches.
+- Refer to troubleshooting guides and community forums for support.
+
+### References
+
+- [Sock Shop GitHub Repository](https://github.com/microservices-demo/microservices-demo)
+- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [Docker Documentation](https://docs.docker.com/)
+- [Helm Documentation](https://helm.sh/docs/)
+
+### Appendix
+
+- Glossary of terms
+- Troubleshooting guides
+- Frequently Asked Questions (FAQs)
+
+This documentation provides a comprehensive guide to deploying, using, and maintaining the Sock Shop application, including all the commands used throughout the process.
